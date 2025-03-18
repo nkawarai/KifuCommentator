@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Collections.ObjectModel;
-using KifuCommentator.Koma;
 using KifuCommentator.Rule;
+using KifuCommentator.Koma;
+using KifuCommentatorApp.Koma;
 
 namespace KifuCommentator
 {
@@ -13,8 +14,8 @@ namespace KifuCommentator
         /// <summary>
         /// 盤上の駒
         /// </summary>
-        private ObservableCollection<IKoma>? _komasOnBoard;
-        public ObservableCollection<IKoma>? KomasOnBoard
+        private ObservableCollection<IShogiKoma>? _komasOnBoard;
+        public ObservableCollection<IShogiKoma>? KomasOnBoard
         {
             get => _komasOnBoard;
             set
@@ -31,7 +32,7 @@ namespace KifuCommentator
         public MainWindowViewModel()
         {
             //初期配置
-            KomasOnBoard = new ObservableCollection<IKoma>(InitialPlacement.InitialKomaPlaces());
+            KomasOnBoard = new ObservableCollection<IShogiKoma>(InitialPlacement.InitialKomaPlaces());
         }
 
         #region ==== INotifyPropertyChanged ===

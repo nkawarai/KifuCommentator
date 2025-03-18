@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DomainShogi\DomainShogi.csproj" />
     <ProjectReference Include="..\ShogibanLib\ShogibanLib.csproj" />
   </ItemGroup>
 

@@ -1,11 +1,9 @@
-﻿using ShogibanLib;
-
-namespace KifuCommentator.Koma
+﻿namespace DomainShogi.Koma
 {
     /// <summary>
     /// 将棋駒　インターフェイス
     /// </summary>
-    public interface IKoma : IKomaDisplay
+    public interface IKoma
     {
         /// <summary>
         /// 駒種別
@@ -23,7 +21,7 @@ namespace KifuCommentator.Koma
         string? NariDisplayCharacter { get; }
 
         /// <summary>
-        /// 成駒か
+        /// 成り駒か
         /// </summary>
         bool IsNarigoma { get; }
     }

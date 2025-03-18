@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using KifuCommentator.Koma;
+using KifuCommentatorApp.Koma;
 
 namespace KifuCommentator.Rule
 {
@@ -12,9 +13,9 @@ namespace KifuCommentator.Rule
         /// 初期配置を表す駒リストを返す
         /// </summary>
         /// <returns></returns>
-        static public IEnumerable<IKoma> InitialKomaPlaces()
+        static public IEnumerable<IShogiKoma> InitialKomaPlaces()
         {
-            var list = new List<IKoma>();
+            var list = new List<IShogiKoma>();
 
             //先手
             list.Add(KomaFactory.CreateGyoku(5, 9, true));

@@ -1,6 +1,10 @@
-﻿namespace KifuCommentator.Koma.Impl
+﻿using KifuCommentatorApp.Koma;
+
+namespace KifuCommentator.Koma.Impl
 {
-    abstract public class KomaBase : IKoma
+    using DomainShogi.Koma;
+
+    abstract public class KomaBase : IShogiKoma
     {
         /// <summary>
         /// 駒種別

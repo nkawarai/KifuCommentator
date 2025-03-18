@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KifuCommentatorApp", "KifuC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShogibanLib", "ShogibanLib\ShogibanLib.csproj", "{10D2D88A-155D-4259-BA9A-890454BDA0FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainShogi", "DomainShogi\DomainShogi.csproj", "{D9E754AC-6803-44D9-8D74-3C985A406B4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{10D2D88A-155D-4259-BA9A-890454BDA0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10D2D88A-155D-4259-BA9A-890454BDA0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10D2D88A-155D-4259-BA9A-890454BDA0FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9E754AC-6803-44D9-8D74-3C985A406B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E754AC-6803-44D9-8D74-3C985A406B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E754AC-6803-44D9-8D74-3C985A406B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E754AC-6803-44D9-8D74-3C985A406B4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

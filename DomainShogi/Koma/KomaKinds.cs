@@ -1,4 +1,4 @@
-﻿namespace KifuCommentator.Koma
+﻿namespace DomainShogi.Koma
 {
     /// <summary>
     /// 駒種別

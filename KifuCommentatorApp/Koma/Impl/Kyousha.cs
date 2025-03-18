@@ -1,5 +1,7 @@
 ﻿namespace KifuCommentator.Koma.Impl
 {
+    using DomainShogi.Koma;
+
     /// <summary>
     /// 香車クラス
     /// </summary>
