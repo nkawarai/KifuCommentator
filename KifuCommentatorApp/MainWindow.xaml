@@ -7,9 +7,31 @@
         xmlns:shogiban="clr-namespace:ShogibanLib;assembly=ShogibanLib"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="棋譜コメンテーター" Height="450" Width="800">
+        Title="棋譜コメンテーター" Height="500" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <!-- メニューバー -->
+        <Menu
+            Grid.Row="0" BorderBrush="Gray" BorderThickness="0,0,0,1">
+            <MenuItem Header="_ファイル">
+                <MenuItem Header="_棋譜ファイル読み込み"/>
+                <MenuItem Header="_保存"/>
+                <Separator />
+                <MenuItem Header="_終了"/>
+            </MenuItem>
+        </Menu>
         <shogiban:ShogiBoard
+            Grid.Row="1"
             KomaArray="{Binding DataContext.KomasOnBoard, RelativeSource={RelativeSource AncestorType=Window}}"/>
+
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>Kifu Commentator</StatusBarItem>
+            <Separator Style="{StaticResource MahApps.Styles.Separator.StatusBar}" />
+            <StatusBarItem>棋譜コメンテーター</StatusBarItem>
+        </StatusBar>
     </Grid>
 </Controls:MetroWindow>

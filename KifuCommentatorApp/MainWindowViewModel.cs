@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Collections.ObjectModel;
 using KifuCommentator.Rule;
-using KifuCommentator.Koma;
 using KifuCommentatorApp.Koma;
 
 namespace KifuCommentator
