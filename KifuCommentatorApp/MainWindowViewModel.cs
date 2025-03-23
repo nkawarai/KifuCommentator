@@ -2,8 +2,9 @@
 using System.Collections.ObjectModel;
 using KifuCommentator.Rule;
 using KifuCommentatorApp.Koma;
+using System.Windows.Input;
 
-namespace KifuCommentator
+namespace KifuCommentatorApp
 {
     /// <summary>
     /// MainWindow のViewModel

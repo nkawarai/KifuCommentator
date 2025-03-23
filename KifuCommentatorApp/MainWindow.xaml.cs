@@ -1,6 +1,6 @@
 ﻿using MahApps.Metro.Controls;
 
-namespace KifuCommentator
+namespace KifuCommentatorApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

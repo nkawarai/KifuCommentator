@@ -1,7 +1,6 @@
 ﻿namespace KifuCommentator.Koma
 {
     using Impl;
-    using DomainShogi.Koma;
     using KifuCommentatorApp.Koma;
 
     /// <summary>
