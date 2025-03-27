@@ -15,7 +15,7 @@
         /// <summary>
         /// Factory
         /// </summary>
-        static public IPlayer Factory(string name, string? rankName)
+        static public IPlayer Factory(string name, string? rankName = null)
             => new Player(name, rankName);
 
         /// <summary>

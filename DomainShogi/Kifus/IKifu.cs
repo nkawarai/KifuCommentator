@@ -1,7 +1,6 @@
 ﻿using DomainShogi.Players;
-using DomainShogi.Sashites;
 
-namespace DomainShogi.Kifu
+namespace DomainShogi.Kifus
 {
     public interface IKifu
     {
@@ -18,7 +17,7 @@ namespace DomainShogi.Kifu
         /// <summary>
         /// 対局日時
         /// </summary>
-        DateTime GameDateTime { get; }
+        DateTime? GameDateTime { get; }
 
         /// <summary>
         /// 対局名
@@ -28,6 +27,11 @@ namespace DomainShogi.Kifu
         /// <summary>
         /// 指し手リスト
         /// </summary>
-        IEnumerable<ISashite> PlayerHands { get; }
+        IEnumerable<string>? PlayerHands { get; }
+
+        /// <summary>
+        /// 指し手を追加する
+        /// </summary>
+        void AddSasite(string sashite);
     }
 }
