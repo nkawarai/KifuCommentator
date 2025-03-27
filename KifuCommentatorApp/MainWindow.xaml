@@ -11,6 +11,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
@@ -24,11 +25,36 @@
                 <MenuItem Header="_終了"/>
             </MenuItem>
         </Menu>
-        <shogiban:ShogiBoard
-            Grid.Row="1"
-            KomaArray="{Binding DataContext.KomasOnBoard, RelativeSource={RelativeSource AncestorType=Window}}"/>
+        <Grid Grid.Row="1">
+            <TextBlock
+                FontSize="24"
+                Margin="5,5"
+                VerticalAlignment="Center"
+                Text="{Binding Kifu.GameTitle}"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <StackPanel>
+                    <TextBlock
+                        FontSize="18"
+                        Margin="5,2"
+                        Text="{Binding Kifu.SentePlayer.Name, StringFormat=▲{0}}"/>
+                    <TextBlock
+                        FontSize="18"
+                        Margin="5,2"
+                        Text="{Binding Kifu.GotePlayer.Name, StringFormat=△{0}}"/>
+                </StackPanel>
+            </Grid>
+            <shogiban:ShogiBoard
+                Grid.Column="1"
+                KomaArray="{Binding DataContext.KomasOnBoard, RelativeSource={RelativeSource AncestorType=Window}}"/>
+        </Grid>
 
-        <StatusBar Grid.Row="2">
+        <StatusBar Grid.Row="3">
             <StatusBarItem>Kifu Commentator</StatusBarItem>
             <Separator Style="{StaticResource MahApps.Styles.Separator.StatusBar}" />
             <StatusBarItem>棋譜コメンテーター</StatusBarItem>
