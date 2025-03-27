@@ -14,6 +14,8 @@ namespace KifuCommentatorApp
     /// </summary>
     public class MainWindowViewModel : INotifyPropertyChanged, IMainWindowViewModel
     {
+        static NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// 棋譜ファイルを読み込むコマンド
         /// </summary>
