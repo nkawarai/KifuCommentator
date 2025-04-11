@@ -1,11 +1,9 @@
-﻿namespace KifuCommentator.Koma.Impl
+﻿namespace DomainShogi.Koma.Impl
 {
-    using DomainShogi.Koma;
-
     /// <summary>
     /// 歩クラス
     /// </summary>
-    internal class Fu : KomaBase
+    internal class Fu : BanjoKomaBase
     {
         /// <summary>
         /// コンストラクタ

@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel;
 using System.Collections.ObjectModel;
-using KifuCommentator.Rule;
-using KifuCommentatorApp.Koma;
 using DomainShogi.Kifus;
 using System.Windows.Input;
 
 namespace KifuCommentatorApp
 {
+    using DomainShogi.Koma;
+    using DomainShogi.Rule;
     using Command;
 
     /// <summary>
@@ -24,8 +24,8 @@ namespace KifuCommentatorApp
         /// <summary>
         /// 盤上の駒
         /// </summary>
-        private ObservableCollection<IShogiKoma>? _komasOnBoard;
-        public ObservableCollection<IShogiKoma>? KomasOnBoard
+        private ObservableCollection<IBanjoKoma>? _komasOnBoard;
+        public ObservableCollection<IBanjoKoma>? KomasOnBoard
         {
             get => _komasOnBoard;
             set
@@ -69,7 +69,7 @@ namespace KifuCommentatorApp
             this.LoadKifuFileCommand = new LoadKifuFileCommand(this);
 
             //初期配置
-            KomasOnBoard = new ObservableCollection<IShogiKoma>(InitialPlacement.InitialKomaPlaces());
+            KomasOnBoard = new ObservableCollection<IBanjoKoma>(InitialPlacement.InitialKomaPlaces());
         }
 
         #region ==== INotifyPropertyChanged ===

@@ -1,11 +1,9 @@
-﻿namespace KifuCommentator.Koma.Impl
+﻿namespace DomainShogi.Koma.Impl
 {
-    using DomainShogi.Koma;
-
     /// <summary>
     /// 玉将クラス
     /// </summary>
-    public class Gyoku : KomaBase
+    public class Gyoku : BanjoKomaBase
     {
         /// <summary>
         /// コンストラクタ

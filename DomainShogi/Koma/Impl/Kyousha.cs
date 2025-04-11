@@ -1,11 +1,9 @@
-﻿namespace KifuCommentator.Koma.Impl
+﻿namespace DomainShogi.Koma.Impl
 {
-    using DomainShogi.Koma;
-
     /// <summary>
     /// 香車クラス
     /// </summary>
-    internal class Kyousha : KomaBase
+    internal class Kyousha : BanjoKomaBase
     {
         /// <summary>
         /// コンストラクタ

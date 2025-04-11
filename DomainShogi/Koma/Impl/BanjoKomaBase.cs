@@ -1,10 +1,6 @@
-﻿using KifuCommentatorApp.Koma;
-
-namespace KifuCommentator.Koma.Impl
+﻿namespace DomainShogi.Koma.Impl
 {
-    using DomainShogi.Koma;
-
-    abstract public class KomaBase : IShogiKoma
+    abstract public class BanjoKomaBase : IBanjoKoma
     {
         /// <summary>
         /// 駒種別
@@ -55,12 +51,12 @@ namespace KifuCommentator.Koma.Impl
         /// <summary>
         /// 太字表示
         /// </summary>
-        public bool IsBoldDisplay { get => false; }
+        public bool IsBoldDisplay { get; protected set; }
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public KomaBase(int column, int row, bool isSentegoma)
+        public BanjoKomaBase(int column, int row, bool isSentegoma)
         {
             Column = column;
             Row = row;

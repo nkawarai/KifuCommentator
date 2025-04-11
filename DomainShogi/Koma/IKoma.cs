@@ -19,10 +19,5 @@
         /// 成駒文字
         /// </summary>
         string? NariDisplayCharacter { get; }
-
-        /// <summary>
-        /// 成り駒か
-        /// </summary>
-        bool IsNarigoma { get; }
     }
 }

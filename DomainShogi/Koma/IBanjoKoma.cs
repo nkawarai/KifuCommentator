@@ -1,15 +1,10 @@
-﻿namespace ShogibanLib
+﻿namespace DomainShogi.Koma
 {
     /// <summary>
-    /// 駒を表示するための要求インターフェイス
+    /// 盤上に配置された駒
     /// </summary>
-    public interface IKomaDisplay
+    public interface IBanjoKoma : IKoma
     {
-        /// <summary>
-        /// 表示順
-        /// </summary>
-        int DisplayOrder { get; }
-
         /// <summary>
         /// 列情報(筋)
         /// </summary>

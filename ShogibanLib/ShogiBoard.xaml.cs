@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using DomainShogi.Koma;
 
 namespace ShogibanLib
 {
@@ -18,19 +19,19 @@ namespace ShogibanLib
         public static readonly DependencyProperty KomaArrayProperty =
             DependencyProperty.Register(
                 nameof(KomaArray),
-                typeof(IEnumerable<IKomaDisplay>),
+                typeof(IEnumerable<IBanjoKoma>),
                 typeof(ShogiBoard),
                 new PropertyMetadata(null, KomaArrayPropertyChanged));
-        public IEnumerable<IKomaDisplay> KomaArray
+        public IEnumerable<IBanjoKoma> KomaArray
         {
-            get => (IEnumerable<IKomaDisplay>)GetValue(KomaArrayProperty);
+            get => (IEnumerable<IBanjoKoma>)GetValue(KomaArrayProperty);
             set => SetValue(KomaArrayProperty, value);
         }
         static private void KomaArrayPropertyChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
         {
             var view = obj as ShogiBoard;
             if (view == null) return;
-            view.UpdateKomaPlace((IEnumerable<IKomaDisplay>)e.NewValue);
+            view.UpdateKomaPlace((IEnumerable<IBanjoKoma>)e.NewValue);
         }
 
         /// <summary>
@@ -39,12 +40,12 @@ namespace ShogibanLib
         public static readonly DependencyProperty SenteMochigomaArrayProperty =
             DependencyProperty.Register(
                 nameof(SenteMochigomaArray),
-                typeof(IEnumerable<IKomaDisplay>),
+                typeof(IEnumerable<IBanjoKoma>),
                 typeof(ShogiBoard),
                 new PropertyMetadata(null, SenteMochigomaArrayPropertyChanged));
-        public IEnumerable<IKomaDisplay> SenteMochigomaArray
+        public IEnumerable<IBanjoKoma> SenteMochigomaArray
         {
-            get => (IEnumerable<IKomaDisplay>)GetValue(SenteMochigomaArrayProperty);
+            get => (IEnumerable<IBanjoKoma>)GetValue(SenteMochigomaArrayProperty);
             set => SetValue(SenteMochigomaArrayProperty, value);
         }
         static private void SenteMochigomaArrayPropertyChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
@@ -61,12 +62,12 @@ namespace ShogibanLib
         public static readonly DependencyProperty GoteMochigomaArrayProperty =
             DependencyProperty.Register(
                 nameof(GoteMochigomaArray),
-                typeof(IEnumerable<IKomaDisplay>),
+                typeof(IEnumerable<IBanjoKoma>),
                 typeof(ShogiBoard),
                 new PropertyMetadata(null, GoteMochigomaArrayPropertyChanged));
-        public IEnumerable<IKomaDisplay> GoteMochigomaArray
+        public IEnumerable<IBanjoKoma> GoteMochigomaArray
         {
-            get => (IEnumerable<IKomaDisplay>)GetValue(GoteMochigomaArrayProperty);
+            get => (IEnumerable<IBanjoKoma>)GetValue(GoteMochigomaArrayProperty);
             set => SetValue(GoteMochigomaArrayProperty, value);
         }
         static private void GoteMochigomaArrayPropertyChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
@@ -82,8 +83,8 @@ namespace ShogibanLib
         /// <summary>
         /// 11
         /// </summary>
-        private IKomaDisplay? _koma11;
-        public IKomaDisplay? Koma11
+        private IBanjoKoma? _koma11;
+        public IBanjoKoma? Koma11
         {
             get => _koma11;
             set
@@ -97,8 +98,8 @@ namespace ShogibanLib
         /// <summary>
         /// 21
         /// </summary>
-        private IKomaDisplay? _koma21;
-        public IKomaDisplay? Koma21
+        private IBanjoKoma? _koma21;
+        public IBanjoKoma? Koma21
         {
             get => _koma21;
             set
@@ -112,8 +113,8 @@ namespace ShogibanLib
         /// <summary>
         /// 31
         /// </summary>
-        private IKomaDisplay? _koma31;
-        public IKomaDisplay? Koma31
+        private IBanjoKoma? _koma31;
+        public IBanjoKoma? Koma31
         {
             get => _koma31;
             set
@@ -127,8 +128,8 @@ namespace ShogibanLib
         /// <summary>
         /// 41
         /// </summary>
-        private IKomaDisplay? _koma41;
-        public IKomaDisplay? Koma41
+        private IBanjoKoma? _koma41;
+        public IBanjoKoma? Koma41
         {
             get => _koma41;
             set
@@ -142,8 +143,8 @@ namespace ShogibanLib
         /// <summary>
         /// 51
         /// </summary>
-        private IKomaDisplay? _koma51;
-        public IKomaDisplay? Koma51
+        private IBanjoKoma? _koma51;
+        public IBanjoKoma? Koma51
         {
             get => _koma51;
             set
@@ -157,8 +158,8 @@ namespace ShogibanLib
         /// <summary>
         /// 61
         /// </summary>
-        private IKomaDisplay? _koma61;
-        public IKomaDisplay? Koma61
+        private IBanjoKoma? _koma61;
+        public IBanjoKoma? Koma61
         {
             get => _koma61;
             set
@@ -172,8 +173,8 @@ namespace ShogibanLib
         /// <summary>
         /// 71
         /// </summary>
-        private IKomaDisplay? _koma71;
-        public IKomaDisplay? Koma71
+        private IBanjoKoma? _koma71;
+        public IBanjoKoma? Koma71
         {
             get => _koma71;
             set
@@ -187,8 +188,8 @@ namespace ShogibanLib
         /// <summary>
         /// 81
         /// </summary>
-        private IKomaDisplay? _koma81;
-        public IKomaDisplay? Koma81
+        private IBanjoKoma? _koma81;
+        public IBanjoKoma? Koma81
         {
             get => _koma81;
             set
@@ -202,8 +203,8 @@ namespace ShogibanLib
         /// <summary>
         /// 91
         /// </summary>
-        private IKomaDisplay? _koma91;
-        public IKomaDisplay? Koma91
+        private IBanjoKoma? _koma91;
+        public IBanjoKoma? Koma91
         {
             get => _koma91;
             set
@@ -219,8 +220,8 @@ namespace ShogibanLib
         /// <summary>
         /// 12
         /// </summary>
-        private IKomaDisplay? _koma12;
-        public IKomaDisplay? Koma12
+        private IBanjoKoma? _koma12;
+        public IBanjoKoma? Koma12
         {
             get => _koma12;
             set
@@ -234,8 +235,8 @@ namespace ShogibanLib
         /// <summary>
         /// 22
         /// </summary>
-        private IKomaDisplay? _koma22;
-        public IKomaDisplay? Koma22
+        private IBanjoKoma? _koma22;
+        public IBanjoKoma? Koma22
         {
             get => _koma22;
             set
@@ -249,8 +250,8 @@ namespace ShogibanLib
         /// <summary>
         /// 32
         /// </summary>
-        private IKomaDisplay? _koma32;
-        public IKomaDisplay? Koma32
+        private IBanjoKoma? _koma32;
+        public IBanjoKoma? Koma32
         {
             get => _koma32;
             set
@@ -264,8 +265,8 @@ namespace ShogibanLib
         /// <summary>
         /// 42
         /// </summary>
-        private IKomaDisplay? _koma42;
-        public IKomaDisplay? Koma42
+        private IBanjoKoma? _koma42;
+        public IBanjoKoma? Koma42
         {
             get => _koma42;
             set
@@ -279,8 +280,8 @@ namespace ShogibanLib
         /// <summary>
         /// 52
         /// </summary>
-        private IKomaDisplay? _koma52;
-        public IKomaDisplay? Koma52
+        private IBanjoKoma? _koma52;
+        public IBanjoKoma? Koma52
         {
             get => _koma52;
             set
@@ -294,8 +295,8 @@ namespace ShogibanLib
         /// <summary>
         /// 62
         /// </summary>
-        private IKomaDisplay? _koma62;
-        public IKomaDisplay? Koma62
+        private IBanjoKoma? _koma62;
+        public IBanjoKoma? Koma62
         {
             get => _koma62;
             set
@@ -309,8 +310,8 @@ namespace ShogibanLib
         /// <summary>
         /// 72
         /// </summary>
-        private IKomaDisplay? _koma72;
-        public IKomaDisplay? Koma72
+        private IBanjoKoma? _koma72;
+        public IBanjoKoma? Koma72
         {
             get => _koma72;
             set
@@ -324,8 +325,8 @@ namespace ShogibanLib
         /// <summary>
         /// 82
         /// </summary>
-        private IKomaDisplay? _koma82;
-        public IKomaDisplay? Koma82
+        private IBanjoKoma? _koma82;
+        public IBanjoKoma? Koma82
         {
             get => _koma82;
             set
@@ -339,8 +340,8 @@ namespace ShogibanLib
         /// <summary>
         /// 92
         /// </summary>
-        private IKomaDisplay? _koma92;
-        public IKomaDisplay? Koma92
+        private IBanjoKoma? _koma92;
+        public IBanjoKoma? Koma92
         {
             get => _koma92;
             set
@@ -356,8 +357,8 @@ namespace ShogibanLib
         /// <summary>
         /// 13
         /// </summary>
-        private IKomaDisplay? _koma13;
-        public IKomaDisplay? Koma13
+        private IBanjoKoma? _koma13;
+        public IBanjoKoma? Koma13
         {
             get => _koma13;
             set
@@ -371,8 +372,8 @@ namespace ShogibanLib
         /// <summary>
         /// 23
         /// </summary>
-        private IKomaDisplay? _koma23;
-        public IKomaDisplay? Koma23
+        private IBanjoKoma? _koma23;
+        public IBanjoKoma? Koma23
         {
             get => _koma23;
             set
@@ -386,8 +387,8 @@ namespace ShogibanLib
         /// <summary>
         /// 32
         /// </summary>
-        private IKomaDisplay? _koma33;
-        public IKomaDisplay? Koma33
+        private IBanjoKoma? _koma33;
+        public IBanjoKoma? Koma33
         {
             get => _koma33;
             set
@@ -401,8 +402,8 @@ namespace ShogibanLib
         /// <summary>
         /// 43
         /// </summary>
-        private IKomaDisplay? _koma43;
-        public IKomaDisplay? Koma43
+        private IBanjoKoma? _koma43;
+        public IBanjoKoma? Koma43
         {
             get => _koma43;
             set
@@ -416,8 +417,8 @@ namespace ShogibanLib
         /// <summary>
         /// 53
         /// </summary>
-        private IKomaDisplay? _koma53;
-        public IKomaDisplay? Koma53
+        private IBanjoKoma? _koma53;
+        public IBanjoKoma? Koma53
         {
             get => _koma53;
             set
@@ -431,8 +432,8 @@ namespace ShogibanLib
         /// <summary>
         /// 62
         /// </summary>
-        private IKomaDisplay? _koma63;
-        public IKomaDisplay? Koma63
+        private IBanjoKoma? _koma63;
+        public IBanjoKoma? Koma63
         {
             get => _koma63;
             set
@@ -446,8 +447,8 @@ namespace ShogibanLib
         /// <summary>
         /// 73
         /// </summary>
-        private IKomaDisplay? _koma73;
-        public IKomaDisplay? Koma73
+        private IBanjoKoma? _koma73;
+        public IBanjoKoma? Koma73
         {
             get => _koma73;
             set
@@ -461,8 +462,8 @@ namespace ShogibanLib
         /// <summary>
         /// 83
         /// </summary>
-        private IKomaDisplay? _koma83;
-        public IKomaDisplay? Koma83
+        private IBanjoKoma? _koma83;
+        public IBanjoKoma? Koma83
         {
             get => _koma83;
             set
@@ -476,8 +477,8 @@ namespace ShogibanLib
         /// <summary>
         /// 93
         /// </summary>
-        private IKomaDisplay? _koma93;
-        public IKomaDisplay? Koma93
+        private IBanjoKoma? _koma93;
+        public IBanjoKoma? Koma93
         {
             get => _koma93;
             set
@@ -493,8 +494,8 @@ namespace ShogibanLib
         /// <summary>
         /// 14
         /// </summary>
-        private IKomaDisplay? _koma14;
-        public IKomaDisplay? Koma14
+        private IBanjoKoma? _koma14;
+        public IBanjoKoma? Koma14
         {
             get => _koma14;
             set
@@ -508,8 +509,8 @@ namespace ShogibanLib
         /// <summary>
         /// 24
         /// </summary>
-        private IKomaDisplay? _koma24;
-        public IKomaDisplay? Koma24
+        private IBanjoKoma? _koma24;
+        public IBanjoKoma? Koma24
         {
             get => _koma24;
             set
@@ -523,8 +524,8 @@ namespace ShogibanLib
         /// <summary>
         /// 34
         /// </summary>
-        private IKomaDisplay? _koma34;
-        public IKomaDisplay? Koma34
+        private IBanjoKoma? _koma34;
+        public IBanjoKoma? Koma34
         {
             get => _koma34;
             set
@@ -538,8 +539,8 @@ namespace ShogibanLib
         /// <summary>
         /// 44
         /// </summary>
-        private IKomaDisplay? _koma44;
-        public IKomaDisplay? Koma44
+        private IBanjoKoma? _koma44;
+        public IBanjoKoma? Koma44
         {
             get => _koma44;
             set
@@ -553,8 +554,8 @@ namespace ShogibanLib
         /// <summary>
         /// 54
         /// </summary>
-        private IKomaDisplay? _koma54;
-        public IKomaDisplay? Koma54
+        private IBanjoKoma? _koma54;
+        public IBanjoKoma? Koma54
         {
             get => _koma54;
             set
@@ -568,8 +569,8 @@ namespace ShogibanLib
         /// <summary>
         /// 64
         /// </summary>
-        private IKomaDisplay? _koma64;
-        public IKomaDisplay? Koma64
+        private IBanjoKoma? _koma64;
+        public IBanjoKoma? Koma64
         {
             get => _koma64;
             set
@@ -583,8 +584,8 @@ namespace ShogibanLib
         /// <summary>
         /// 74
         /// </summary>
-        private IKomaDisplay? _koma74;
-        public IKomaDisplay? Koma74
+        private IBanjoKoma? _koma74;
+        public IBanjoKoma? Koma74
         {
             get => _koma74;
             set
@@ -598,8 +599,8 @@ namespace ShogibanLib
         /// <summary>
         /// 84
         /// </summary>
-        private IKomaDisplay? _koma84;
-        public IKomaDisplay? Koma84
+        private IBanjoKoma? _koma84;
+        public IBanjoKoma? Koma84
         {
             get => _koma84;
             set
@@ -613,8 +614,8 @@ namespace ShogibanLib
         /// <summary>
         /// 94
         /// </summary>
-        private IKomaDisplay? _koma94;
-        public IKomaDisplay? Koma94
+        private IBanjoKoma? _koma94;
+        public IBanjoKoma? Koma94
         {
             get => _koma94;
             set
@@ -630,8 +631,8 @@ namespace ShogibanLib
         /// <summary>
         /// 15
         /// </summary>
-        private IKomaDisplay? _koma15;
-        public IKomaDisplay? Koma15
+        private IBanjoKoma? _koma15;
+        public IBanjoKoma? Koma15
         {
             get => _koma15;
             set
@@ -645,8 +646,8 @@ namespace ShogibanLib
         /// <summary>
         /// 25
         /// </summary>
-        private IKomaDisplay? _koma25;
-        public IKomaDisplay? Koma25
+        private IBanjoKoma? _koma25;
+        public IBanjoKoma? Koma25
         {
             get => _koma25;
             set
@@ -660,8 +661,8 @@ namespace ShogibanLib
         /// <summary>
         /// 35
         /// </summary>
-        private IKomaDisplay? _koma35;
-        public IKomaDisplay? Koma35
+        private IBanjoKoma? _koma35;
+        public IBanjoKoma? Koma35
         {
             get => _koma35;
             set
@@ -675,8 +676,8 @@ namespace ShogibanLib
         /// <summary>
         /// 45
         /// </summary>
-        private IKomaDisplay? _koma45;
-        public IKomaDisplay? Koma45
+        private IBanjoKoma? _koma45;
+        public IBanjoKoma? Koma45
         {
             get => _koma45;
             set
@@ -690,8 +691,8 @@ namespace ShogibanLib
         /// <summary>
         /// 55
         /// </summary>
-        private IKomaDisplay? _koma55;
-        public IKomaDisplay? Koma55
+        private IBanjoKoma? _koma55;
+        public IBanjoKoma? Koma55
         {
             get => _koma55;
             set
@@ -705,8 +706,8 @@ namespace ShogibanLib
         /// <summary>
         /// 65
         /// </summary>
-        private IKomaDisplay? _koma65;
-        public IKomaDisplay? Koma65
+        private IBanjoKoma? _koma65;
+        public IBanjoKoma? Koma65
         {
             get => _koma65;
             set
@@ -720,8 +721,8 @@ namespace ShogibanLib
         /// <summary>
         /// 75
         /// </summary>
-        private IKomaDisplay? _koma75;
-        public IKomaDisplay? Koma75
+        private IBanjoKoma? _koma75;
+        public IBanjoKoma? Koma75
         {
             get => _koma75;
             set
@@ -735,8 +736,8 @@ namespace ShogibanLib
         /// <summary>
         /// 85
         /// </summary>
-        private IKomaDisplay? _koma85;
-        public IKomaDisplay? Koma85
+        private IBanjoKoma? _koma85;
+        public IBanjoKoma? Koma85
         {
             get => _koma85;
             set
@@ -750,8 +751,8 @@ namespace ShogibanLib
         /// <summary>
         /// 95
         /// </summary>
-        private IKomaDisplay? _koma95;
-        public IKomaDisplay? Koma95
+        private IBanjoKoma? _koma95;
+        public IBanjoKoma? Koma95
         {
             get => _koma95;
             set
@@ -767,8 +768,8 @@ namespace ShogibanLib
         /// <summary>
         /// 16
         /// </summary>
-        private IKomaDisplay? _koma16;
-        public IKomaDisplay? Koma16
+        private IBanjoKoma? _koma16;
+        public IBanjoKoma? Koma16
         {
             get => _koma16;
             set
@@ -782,8 +783,8 @@ namespace ShogibanLib
         /// <summary>
         /// 26
         /// </summary>
-        private IKomaDisplay? _koma26;
-        public IKomaDisplay? Koma26
+        private IBanjoKoma? _koma26;
+        public IBanjoKoma? Koma26
         {
             get => _koma26;
             set
@@ -797,8 +798,8 @@ namespace ShogibanLib
         /// <summary>
         /// 36
         /// </summary>
-        private IKomaDisplay? _koma36;
-        public IKomaDisplay? Koma36
+        private IBanjoKoma? _koma36;
+        public IBanjoKoma? Koma36
         {
             get => _koma36;
             set
@@ -812,8 +813,8 @@ namespace ShogibanLib
         /// <summary>
         /// 46
         /// </summary>
-        private IKomaDisplay? _koma46;
-        public IKomaDisplay? Koma46
+        private IBanjoKoma? _koma46;
+        public IBanjoKoma? Koma46
         {
             get => _koma46;
             set
@@ -827,8 +828,8 @@ namespace ShogibanLib
         /// <summary>
         /// 56
         /// </summary>
-        private IKomaDisplay? _koma56;
-        public IKomaDisplay? Koma56
+        private IBanjoKoma? _koma56;
+        public IBanjoKoma? Koma56
         {
             get => _koma56;
             set
@@ -842,8 +843,8 @@ namespace ShogibanLib
         /// <summary>
         /// 66
         /// </summary>
-        private IKomaDisplay? _koma66;
-        public IKomaDisplay? Koma66
+        private IBanjoKoma? _koma66;
+        public IBanjoKoma? Koma66
         {
             get => _koma66;
             set
@@ -857,8 +858,8 @@ namespace ShogibanLib
         /// <summary>
         /// 76
         /// </summary>
-        private IKomaDisplay? _koma76;
-        public IKomaDisplay? Koma76
+        private IBanjoKoma? _koma76;
+        public IBanjoKoma? Koma76
         {
             get => _koma76;
             set
@@ -872,8 +873,8 @@ namespace ShogibanLib
         /// <summary>
         /// 86
         /// </summary>
-        private IKomaDisplay? _koma86;
-        public IKomaDisplay? Koma86
+        private IBanjoKoma? _koma86;
+        public IBanjoKoma? Koma86
         {
             get => _koma86;
             set
@@ -887,8 +888,8 @@ namespace ShogibanLib
         /// <summary>
         /// 96
         /// </summary>
-        private IKomaDisplay? _koma96;
-        public IKomaDisplay? Koma96
+        private IBanjoKoma? _koma96;
+        public IBanjoKoma? Koma96
         {
             get => _koma96;
             set
@@ -904,8 +905,8 @@ namespace ShogibanLib
         /// <summary>
         /// 17
         /// </summary>
-        private IKomaDisplay? _koma17;
-        public IKomaDisplay? Koma17
+        private IBanjoKoma? _koma17;
+        public IBanjoKoma? Koma17
         {
             get => _koma17;
             set
@@ -919,8 +920,8 @@ namespace ShogibanLib
         /// <summary>
         /// 27
         /// </summary>
-        private IKomaDisplay? _koma27;
-        public IKomaDisplay? Koma27
+        private IBanjoKoma? _koma27;
+        public IBanjoKoma? Koma27
         {
             get => _koma27;
             set
@@ -934,8 +935,8 @@ namespace ShogibanLib
         /// <summary>
         /// 37
         /// </summary>
-        private IKomaDisplay? _koma37;
-        public IKomaDisplay? Koma37
+        private IBanjoKoma? _koma37;
+        public IBanjoKoma? Koma37
         {
             get => _koma37;
             set
@@ -949,8 +950,8 @@ namespace ShogibanLib
         /// <summary>
         /// 47
         /// </summary>
-        private IKomaDisplay? _koma47;
-        public IKomaDisplay? Koma47
+        private IBanjoKoma? _koma47;
+        public IBanjoKoma? Koma47
         {
             get => _koma47;
             set
@@ -964,8 +965,8 @@ namespace ShogibanLib
         /// <summary>
         /// 57
         /// </summary>
-        private IKomaDisplay? _koma57;
-        public IKomaDisplay? Koma57
+        private IBanjoKoma? _koma57;
+        public IBanjoKoma? Koma57
         {
             get => _koma57;
             set
@@ -979,8 +980,8 @@ namespace ShogibanLib
         /// <summary>
         /// 67
         /// </summary>
-        private IKomaDisplay? _koma67;
-        public IKomaDisplay? Koma67
+        private IBanjoKoma? _koma67;
+        public IBanjoKoma? Koma67
         {
             get => _koma67;
             set
@@ -994,8 +995,8 @@ namespace ShogibanLib
         /// <summary>
         /// 77
         /// </summary>
-        private IKomaDisplay? _koma77;
-        public IKomaDisplay? Koma77
+        private IBanjoKoma? _koma77;
+        public IBanjoKoma? Koma77
         {
             get => _koma77;
             set
@@ -1009,8 +1010,8 @@ namespace ShogibanLib
         /// <summary>
         /// 87
         /// </summary>
-        private IKomaDisplay? _koma87;
-        public IKomaDisplay? Koma87
+        private IBanjoKoma? _koma87;
+        public IBanjoKoma? Koma87
         {
             get => _koma87;
             set
@@ -1024,8 +1025,8 @@ namespace ShogibanLib
         /// <summary>
         /// 97
         /// </summary>
-        private IKomaDisplay? _koma97;
-        public IKomaDisplay? Koma97
+        private IBanjoKoma? _koma97;
+        public IBanjoKoma? Koma97
         {
             get => _koma97;
             set
@@ -1041,8 +1042,8 @@ namespace ShogibanLib
         /// <summary>
         /// 18
         /// </summary>
-        private IKomaDisplay? _koma18;
-        public IKomaDisplay? Koma18
+        private IBanjoKoma? _koma18;
+        public IBanjoKoma? Koma18
         {
             get => _koma18;
             set
@@ -1056,8 +1057,8 @@ namespace ShogibanLib
         /// <summary>
         /// 28
         /// </summary>
-        private IKomaDisplay? _koma28;
-        public IKomaDisplay? Koma28
+        private IBanjoKoma? _koma28;
+        public IBanjoKoma? Koma28
         {
             get => _koma28;
             set
@@ -1071,8 +1072,8 @@ namespace ShogibanLib
         /// <summary>
         /// 38
         /// </summary>
-        private IKomaDisplay? _koma38;
-        public IKomaDisplay? Koma38
+        private IBanjoKoma? _koma38;
+        public IBanjoKoma? Koma38
         {
             get => _koma38;
             set
@@ -1086,8 +1087,8 @@ namespace ShogibanLib
         /// <summary>
         /// 48
         /// </summary>
-        private IKomaDisplay? _koma48;
-        public IKomaDisplay? Koma48
+        private IBanjoKoma? _koma48;
+        public IBanjoKoma? Koma48
         {
             get => _koma48;
             set
@@ -1101,8 +1102,8 @@ namespace ShogibanLib
         /// <summary>
         /// 58
         /// </summary>
-        private IKomaDisplay? _koma58;
-        public IKomaDisplay? Koma58
+        private IBanjoKoma? _koma58;
+        public IBanjoKoma? Koma58
         {
             get => _koma58;
             set
@@ -1116,8 +1117,8 @@ namespace ShogibanLib
         /// <summary>
         /// 68
         /// </summary>
-        private IKomaDisplay? _koma68;
-        public IKomaDisplay? Koma68
+        private IBanjoKoma? _koma68;
+        public IBanjoKoma? Koma68
         {
             get => _koma68;
             set
@@ -1131,8 +1132,8 @@ namespace ShogibanLib
         /// <summary>
         /// 78
         /// </summary>
-        private IKomaDisplay? _koma78;
-        public IKomaDisplay? Koma78
+        private IBanjoKoma? _koma78;
+        public IBanjoKoma? Koma78
         {
             get => _koma78;
             set
@@ -1146,8 +1147,8 @@ namespace ShogibanLib
         /// <summary>
         /// 88
         /// </summary>
-        private IKomaDisplay? _koma88;
-        public IKomaDisplay? Koma88
+        private IBanjoKoma? _koma88;
+        public IBanjoKoma? Koma88
         {
             get => _koma88;
             set
@@ -1161,8 +1162,8 @@ namespace ShogibanLib
         /// <summary>
         /// 98
         /// </summary>
-        private IKomaDisplay? _koma98;
-        public IKomaDisplay? Koma98
+        private IBanjoKoma? _koma98;
+        public IBanjoKoma? Koma98
         {
             get => _koma98;
             set
@@ -1178,8 +1179,8 @@ namespace ShogibanLib
         /// <summary>
         /// 19
         /// </summary>
-        private IKomaDisplay? _koma19;
-        public IKomaDisplay? Koma19
+        private IBanjoKoma? _koma19;
+        public IBanjoKoma? Koma19
         {
             get => _koma19;
             set
@@ -1193,8 +1194,8 @@ namespace ShogibanLib
         /// <summary>
         /// 29
         /// </summary>
-        private IKomaDisplay? _koma29;
-        public IKomaDisplay? Koma29
+        private IBanjoKoma? _koma29;
+        public IBanjoKoma? Koma29
         {
             get => _koma29;
             set
@@ -1208,8 +1209,8 @@ namespace ShogibanLib
         /// <summary>
         /// 39
         /// </summary>
-        private IKomaDisplay? _koma39;
-        public IKomaDisplay? Koma39
+        private IBanjoKoma? _koma39;
+        public IBanjoKoma? Koma39
         {
             get => _koma39;
             set
@@ -1223,8 +1224,8 @@ namespace ShogibanLib
         /// <summary>
         /// 49
         /// </summary>
-        private IKomaDisplay? _koma49;
-        public IKomaDisplay? Koma49
+        private IBanjoKoma? _koma49;
+        public IBanjoKoma? Koma49
         {
             get => _koma49;
             set
@@ -1238,8 +1239,8 @@ namespace ShogibanLib
         /// <summary>
         /// 59
         /// </summary>
-        private IKomaDisplay? _koma59;
-        public IKomaDisplay? Koma59
+        private IBanjoKoma? _koma59;
+        public IBanjoKoma? Koma59
         {
             get => _koma59;
             set
@@ -1253,8 +1254,8 @@ namespace ShogibanLib
         /// <summary>
         /// 69
         /// </summary>
-        private IKomaDisplay? _koma69;
-        public IKomaDisplay? Koma69
+        private IBanjoKoma? _koma69;
+        public IBanjoKoma? Koma69
         {
             get => _koma69;
             set
@@ -1268,8 +1269,8 @@ namespace ShogibanLib
         /// <summary>
         /// 79
         /// </summary>
-        private IKomaDisplay? _koma79;
-        public IKomaDisplay? Koma79
+        private IBanjoKoma? _koma79;
+        public IBanjoKoma? Koma79
         {
             get => _koma79;
             set
@@ -1283,8 +1284,8 @@ namespace ShogibanLib
         /// <summary>
         /// 89
         /// </summary>
-        private IKomaDisplay? _koma89;
-        public IKomaDisplay? Koma89
+        private IBanjoKoma? _koma89;
+        public IBanjoKoma? Koma89
         {
             get => _koma89;
             set
@@ -1298,8 +1299,8 @@ namespace ShogibanLib
         /// <summary>
         /// 99
         /// </summary>
-        private IKomaDisplay? _koma99;
-        public IKomaDisplay? Koma99
+        private IBanjoKoma? _koma99;
+        public IBanjoKoma? Koma99
         {
             get => _koma99;
             set
@@ -1320,7 +1321,7 @@ namespace ShogibanLib
             this.DataContext = this;
         }
 
-        public void UpdateKomaPlace(IEnumerable<IKomaDisplay> komaDisplays)
+        public void UpdateKomaPlace(IEnumerable<IBanjoKoma> komaDisplays)
         {
             //HACK:アホみたいなコードだが、とりあえず動くことを優先させる
             Koma11 = komaDisplays.Where(x => x.Column == 1 && x.Row == 1)?.FirstOrDefault();
