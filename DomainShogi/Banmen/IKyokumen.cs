@@ -9,6 +9,11 @@ namespace DomainShogi.Banmen
     public interface IKyokumen
     {
         /// <summary>
+        /// 手数
+        /// </summary>
+        int TurnCount { get; }
+
+        /// <summary>
         /// 対局状態
         /// </summary>
         GameState State { get; }
@@ -16,12 +21,12 @@ namespace DomainShogi.Banmen
         /// <summary>
         /// 現在の指し手
         /// </summary>
-        ISashite Current { get; }
+        ISashite? Current { get; }
 
         /// <summary>
         /// 盤上の駒
         /// </summary>
-        IEnumerable<IKoma> KomasOnBoard { get; }
+        IEnumerable<IBanjoKoma> KomasOnBoard { get; }
 
         /// <summary>
         /// 先手の持ち駒
