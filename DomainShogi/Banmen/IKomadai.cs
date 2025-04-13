@@ -18,7 +18,7 @@ namespace DomainShogi.Banmen
         /// 駒を取り除く
         /// </summary>
         /// <param name="koma"></param>
-        void Remove(IKoma koma);
+        bool Remove(IKoma koma);
 
         /// <summary>
         /// 「金」をカウントする

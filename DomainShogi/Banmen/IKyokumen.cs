@@ -14,6 +14,11 @@ namespace DomainShogi.Banmen
         GameState State { get; }
 
         /// <summary>
+        /// 現在の指し手
+        /// </summary>
+        ISashite Current { get; }
+
+        /// <summary>
         /// 盤上の駒
         /// </summary>
         IEnumerable<IKoma> KomasOnBoard { get; }

@@ -1,6 +1,6 @@
-﻿namespace DomainShogi.Banmen
+﻿namespace DomainShogi.Banmen.Impl
 {
-    public class Address : IAddress
+    internal class Address : IAddress
     {
         /// <summary>
         /// 筋
