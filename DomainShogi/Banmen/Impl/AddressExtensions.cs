@@ -1,4 +1,4 @@
-﻿namespace DomainShogi.Banmen
+﻿namespace DomainShogi.Banmen.Impl
 {
     /// <summary>
     /// Intに関する拡張クラス
