@@ -1,9 +1,12 @@
-﻿namespace DomainShogi.Kifus
-{
-    using Statics;
-    using Players;
-    using System.Text;
+﻿using System;
+using System.Text;
+using System.IO;
+using System.Linq;
+using DomainShogi.Kifus;
+using DomainShogi.Players;
 
+namespace KifuCommentatorApp.Infra
+{
     /// <summary>
     /// 棋譜ファイル
     /// </summary>
@@ -57,7 +60,7 @@
                 if (!int.TryParse(array[0], out var count)) throw new FormatException();
                 kifu.AddSasite(array[1]); //消費時間はとりあえず無視
 
-                if (array[1] == "投了") break; //TODO 仮実装
+                if (GameResult.KifuIsCompleted(array[1])) break;
             }
 
             return kifu;

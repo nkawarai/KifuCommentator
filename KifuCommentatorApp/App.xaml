@@ -1,7 +1,7 @@
-﻿<Application x:Class="KifuCommentator.App"
+﻿<Application x:Class="KifuCommentatorApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:KifuCommentator"
+             xmlns:local="clr-namespace:KifuCommentatorApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>

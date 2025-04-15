@@ -2,7 +2,7 @@
 {
     using Players;
 
-    internal class Kifu : IKifu
+    public class Kifu : IKifu
     {
         /// <summary>
         /// 先手対局者

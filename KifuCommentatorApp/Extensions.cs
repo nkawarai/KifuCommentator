@@ -1,4 +1,6 @@
-﻿namespace DomainShogi.Statics
+﻿using System;
+
+namespace KifuCommentatorApp
 {
     /// <summary>
     /// 拡張メソッド
