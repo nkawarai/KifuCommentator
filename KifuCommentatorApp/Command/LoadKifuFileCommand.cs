@@ -32,6 +32,7 @@ namespace KifuCommentatorApp.Command
                 if (!dialog.ShowDialog() ?? false) return;
 
                 //棋譜を読み込む
+                var kifu = KifuFile.LoadKifuFile(dialog.FileName);
                 _vm.SetKifu(KifuFile.LoadKifuFile(dialog.FileName));
             }
             catch (Exception ex)

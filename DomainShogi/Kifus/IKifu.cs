@@ -1,4 +1,5 @@
-﻿using DomainShogi.Players;
+﻿using DomainShogi.Banmen;
+using DomainShogi.Players;
 
 namespace DomainShogi.Kifus
 {
@@ -33,5 +34,11 @@ namespace DomainShogi.Kifus
         /// 指し手を追加する
         /// </summary>
         void AddSasite(string sashite);
+
+        /// <summary>
+        /// パースする
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<IKyokumen> ParseToKyokumens();
     }
 }
